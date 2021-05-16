@@ -1,0 +1,229 @@
+
+.Homepage {
+    position: fixed;
+    z-index: 1;
+    
+}
+form.d-flex {
+    
+    margin-left: 120px;
+}
+input.form-control.me-2 {
+    width: 395px;
+}
+.list-menu {
+    margin-left: 85px;
+}
+img#Logo-web {
+    width: 120px;
+    margin-left: 85px;
+}
+
+.verticalLine {
+    border-left: solid 1px #000000;
+    height: 16px;
+    position: relative;
+    top: 14px;
+}
+
+.list-menu2 {
+    position: relative;
+    display: flex;
+    top: 80px;
+    background: green;
+}
+a.nav-link {
+    color: white;
+}
+i.material-icons {
+    color: white;
+    position: relative;
+    top: 2px;
+    left: 12px;
+}
+.verticalLine2 {
+    border-left: solid 1px #ffffff;
+    height: 16px;
+    position: relative;
+    top: 14px;
+}
+nav.nav {
+    position: relative;
+    left: 565px;
+}
+p#list\ item {
+    position: relative;
+    top: 7px;
+    color: white;
+    margin-left: 43px;
+}
+i.fa {
+    position: relative;
+    top: 3px;
+    left: 21px;
+}
+i#generality {
+    position: relative;
+    margin-right: 70px;
+}
+.list-group {
+    width: 300px;
+    font-size: 13px;
+    position: relative;
+   
+}
+.all-group-book {
+    display: flex;
+    position: relative;
+    top: 82px;
+}
+div#carouselExampleIndicators {
+    width: 863px;
+    margin-left: 1px;
+}
+.bg-light {
+    background-color: #f8f9fa!important;
+    width: 1264px;
+}
+.news-book {
+    display: grid;
+    margin-left: 55px;
+}
+img.all-image {
+    width: 287px;
+    border: solid 1px #a9a9aa;
+}
+.category-buy-book {
+    width: 1263px;
+    display: flex;
+    position: relative;
+    top: 85px;
+}
+li.list-group-item.list-group-item-primary {
+    position: relative;
+    top: 82px;
+}
+a.btn.btn-primary {
+    position: relative;
+    margin-left: 62px;
+}
+p.Price-book {
+    position: relative;
+    margin-left: 92px;
+    color: red;
+}
+li.list-group-item.list-group-item-warning {
+    position: relative;
+    top: 96px;
+}
+.category-buy-book2 {
+    display: flex;
+    position: relative;
+    top: 105px;
+}
+li.list-group-item.list-group-item-danger {
+    position: relative;
+    top: 116px;
+}
+.category-buy-book3 {
+    display: flex;
+    position: relative;
+    top: 127px;
+}
+.introduce {
+    display: flex;
+    position: relative;
+    top: 300px;
+    
+}
+ul.all-introduce {
+    list-style: none;
+    margin-left: 10px;
+}
+img.sales.partner {
+    width: 66px;
+}
+img.shipping.partner {
+    width: 105px;
+}
+.end-page {
+    position: relative;
+    top: 337px;
+    background: #dbdbdb;
+    height: 159px;
+    display: flex;
+}
+img#recognition {
+    width: 215px;
+    height: 86px;
+    position: relative;
+    left: 52px;
+    top: 10px;
+}
+
+img.same.system {
+    width: 160px;
+    height: 38px;
+}
+div#andress {
+    position: relative;
+    left: 145px;
+}
+div#same-system-all {
+    position: relative;
+    left: 222px;
+}
+p.andress-small {
+    font-size: 12px;
+}
+p#CTTNHH {
+    font-size: 14px;
+}
+a.btn.btn-primary {
+    position: relative;
+    width: 100px;
+    margin-left: 75px;
+}
+.introduce-1 {
+    display: flex;
+}
+li.aaa {
+    font-size: 13px;
+    color: #6f6b6b;
+}
+.introduce-2 {
+    display: flex;
+}
+select#mySelect {
+    position: relative;
+    width: 107%;
+    background: green;
+    height: 100%;
+    border: green;
+}
+#display-book{
+	display: flex;
+	margin-left: 5%;
+}
+#book-list{
+	background-color: white;
+	border:  2px solid #EFF0F5;
+	height: 450px;
+	width: 204px;
+}
+#book-list:hover{
+	background: lightblue;
+	opacity: 0.5;
+}
+.index-image{
+	height: 200px;
+	width: 200px;
+}
+#display-infor{
+	line-height: 18px;
+	padding-left: 5px;
+}
+.not-found{
+	position: relative;
+    top: 300px;
+}

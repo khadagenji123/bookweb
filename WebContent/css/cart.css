@@ -1,0 +1,213 @@
+
+.Homepage {
+    position: fixed;
+    z-index: 1;
+    
+}
+form.d-flex {
+    
+    margin-left: 120px;
+}
+input.form-control.me-2 {
+    width: 395px;
+}
+.list-menu {
+    margin-left: 85px;
+}
+img#Logo-web {
+    width: 120px;
+    margin-left: 85px;
+}
+.Menu-all {
+    background: #f1eeee;
+     height: 1000px;
+}
+
+.Order {
+   display: flex;
+    position: relative;
+    top: 90px;
+}
+img.card-img-top {
+    width: 115px;
+    height: 116px;
+    position: relative;
+    top: 7px;
+}
+.total.orders {
+    position: relative;
+    background: white;
+    display: flex;
+    width: 734px;
+    height: 135px;
+    top: 15px;
+    left: 15px;
+    border: outset;
+}
+
+button.btn-close {
+    position: relative;
+    top: 50px;
+    margin-left: 15px;
+}
+.total-book {
+    position: relative;
+    width: 400px;
+    top: 10px;
+}
+.input-group {
+    position: relative;
+    top: 20px;
+    left: 150px;
+}
+input.form-control.input-number {
+    width: 70px;
+}
+.order.details {
+ 	position: relative;
+    top: 15px;
+    background: white;
+    left: 45px;
+    border: outset;
+    width: 406px;
+}
+input.Pay-book {
+    position: relative;
+    right: 75px;
+    width: 175px;
+    background: #f7012f;
+}
+
+form.number-product {
+    display: flex;
+}
+.increasing.the.number {
+    position: relative;
+    top: 18px;
+    left: 60px;
+}
+p.thantien {
+    position: relative;
+    top: 10px;
+}
+p.into.money {
+    color: red;
+    position: relative;
+    top: 10px;
+    left: 1px;
+}
+
+.introduce {
+    display: flex;
+    position: relative;
+    top: 425px;
+    
+}
+ul.all-introduce {
+    list-style: none;
+    margin-left: 10px;
+}
+img.sales.partner {
+    width: 66px;
+}
+img.shipping.partner {
+    width: 105px;
+}
+.end-page {
+    position: relative;
+    top: 503px;
+    background: #dbdbdb;
+    height: 159px;
+    display: flex;
+}
+img#recognition {
+    width: 215px;
+    height: 86px;
+    position: relative;
+    left: 52px;
+    top: 10px;
+}
+
+img.same.system {
+    width: 160px;
+    height: 38px;
+}
+div#andress {
+    position: relative;
+    left: 145px;
+}
+div#same-system-all {
+    position: relative;
+    left: 222px;
+}
+p.andress-small {
+    font-size: 12px;
+}
+p#CTTNHH {
+    font-size: 14px;
+}
+a.btn.btn-primary {
+    position: relative;
+    width: 100px;
+    margin-left: 75px;
+}
+.introduce-1 {
+    display: flex;
+}
+li.aaa {
+    font-size: 13px;
+    color: #6f6b6b;
+}
+.introduce-2 {
+    display: flex;
+}
+select#mySelect {
+    position: relative;
+    width: 107%;
+    background: green;
+    height: 100%;
+    border: green;
+}
+
+.menu-introduce {
+    position: relative;
+    top: 55px;
+}
+.tomtat {
+    background: green;
+    position: relative;
+    height: 30px;
+}
+p.donhang {
+    position: relative;
+    margin-left: 155px;
+    font-size: 20px;
+    color: white;
+}
+.all-paybook {
+    display: flex;
+}
+.price {
+    position: relative;
+    left: 190px;
+}
+.price1 {
+    position: relative;
+    left: 100px;
+}
+.price2 {
+    width: 15px;
+}
+
+a.Comback {
+    position: relative;
+    top: 80px;
+    left: 5px;
+}
+.total-pay {
+    position: relative;
+    left: 12px;
+}
+p{
+	line-height:1.5;
+}

@@ -1,0 +1,108 @@
+body{
+	background-image:url('../image/h2.jpg');
+	background-repeat: no-repeat;
+	 background-size: 1536px;
+}
+.all-login {
+    position: relative;
+    background: white;
+    border-radius: 10px;
+    height: 670px;
+    width: 580px;
+    margin-left: 390px;
+    top: 25px;
+    opacity: 0.8;
+}
+.text-login {
+    display: grid;
+}
+
+input.text-input {
+    width: 455px;
+    height: 46px;
+    position: relative;
+    top: 82px;
+    margin-left: 57px;
+}
+p#Title-Login {
+    position: relative;
+    top: 100px;
+    left: 203px;
+    font-size: 40px;
+    color: brown;
+}
+p.information {
+    position: relative;
+    top: 100px;
+    font-size: 20px;
+    left: 57px;
+}
+.submit-login {
+    position: relative;
+    top: 126px;
+}
+.button-login {
+    width: 347px;
+    height: 50px;
+    border-radius: 25px;
+    background: #ff5200;
+    margin-left: 116px;
+    color: white;
+    font-size: 18px;  
+}
+.button-login:hover {
+  background-color: #FF0000;
+ 
+}
+p#exam {
+    position: relative;
+    left: 265px;
+    font-size: 19px;
+    color: gray;
+}
+a#sign-up {
+    position: relative;
+    left: 218px;
+    font-size: 20px;
+    text-decoration: none;
+    color: green;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    border-radius: 50px;
+    text-align: center;  
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
