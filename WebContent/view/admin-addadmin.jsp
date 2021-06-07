@@ -1,18 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<title>User</title>
+<title>Category</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
 <link rel="stylesheet" href="css/admin.css">
 <link rel="stylesheet" href="css/adcategory.css">
 </head>
 <body>
-<input type="checkbox" id="sidebar-toggle">
+ <input type="checkbox" id="sidebar-toggle">
     <div class="sidebar">
         <div class="sidebar-header">
             <h3 class="brand">
@@ -74,7 +74,6 @@
             </ul>
         </div>
     </div>
-    
     <div class="main-content">
         <header>
             <div class="search-wrapper">
@@ -90,33 +89,40 @@
         <section class="recent">
             <div class="activity-grid">
                 <div class="activity-card">
-                <button onclick="openForm()" style="
-				    margin-left: 95px;
-				    margin-top: 20px;">Add admin</button>
                     <div class="table-responsive">
-                        <!-- Bảng User -->
+                        <!-- Liên hệ(Contract) -->
                         <table border="1">
                             <thead>
                                 <th>Id</th>
-                                <th>User Name</th>
-                                <th>Password</th>
                                 <th>Name</th>
-                                <th>phone_number</th>
-                                <th>Email</th>
-                                <th>Address</th>
-                                <th>Check User</th>
+                                <th>Action</th>
                             </thead>
                             <tbody>
-                            	<c:forEach var="tempUser" items="${list_user }">
+                            	<c:forEach var="tempCategory" items="${list_category }">
+					        		<c:url var="deleteCategory" value="Admin_CategoryServlet">
+					        			<c:param name="command" value="DELETE"/>
+					        			<c:param name="categoryId" value="${tempCategory.categoryId }"/>
+					        		</c:url>
+					        		
 					        		<tr>
-					        			<td>${tempUser.userId }</td>
-					        			<td>${tempUser.userName }</td>
-					        			<td>${tempUser.password }</td>
-					        			<td>${tempUser.name }</td>
-					        			<td>${tempUser.phone }</td>
-					        			<td>${tempUser.email }</td>
-					        			<td>${tempUser.address }</td>
-					        			<td>${tempUser.checkUser }</td>
+					        			<td>${tempCategory.categoryId }</td>
+					        			<td>
+					        				<form action="Admin_CategoryServlet" method="get">
+					        					<input type="hidden" name="command" value="UPDATE">
+					        					<input type="hidden" name="categoryId" value="${tempCategory.categoryId }">
+					        					<input type="text"  name="categoryName" value="${tempCategory.categoryName }" 
+					        					style="border: none;outline-width: 0;">
+					        			</td>
+					        			<td>
+					        				<input type="submit" value="Update">
+					        				</form>
+					        				&nbsp;&nbsp;&nbsp;
+					        				<button  onclick="openForm()">Add</button>
+					        				&nbsp;&nbsp;&nbsp;
+					        				<a href = "${deleteCategory }"
+					    	 	 			onclick = "if(!(confirm('Are you sure you want to delete this category?'))) {return false; }" >
+					    	 	 			<button class="button" >Delete</button></a>
+					        			</td>
 					        		</tr>
 					        	</c:forEach> 
                             </tbody>
@@ -130,18 +136,12 @@
     
      <div class="loginPopup">
       <div class="formPopup" id="popupForm">
-        <form action="Admin_UserServlet" method="get" class="formContainer">
-          <h2>Add Admin</h2>
+        <form action="Admin_CategoryServlet" method="get" class="formContainer">
+          <h2>Add Category</h2>
           <input type="hidden" name="command" value="ADD">
-          <input type="text" placeholder="User Name" name="userName" required>
-          <input type="password" placeholder="Password" name="password" required>
-          <input type="text" placeholder="Name" name="name" required>
-          <input type="text" placeholder="Phone" onchange="checkPhone()" name="phone" id ="phone"required>
-          <p id="phonemessage" class="missmatch" style="color: red;"></p>
-          <input type="text" placeholder="Email" onchange="checkEmail()"s name="email" id="email" required>
-          <p id="emailmessage" class="missmatch" style="color: red;"></p>
-          <input type="text" placeholder="Address" name="address" required>
-          <button type="submit" class="btn" id="submit">Submit</button>
+          <input type="text" placeholder="Category Name" name="categoryName" required>
+          <button type="submit" class="btn">Submit</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
         </form>
       </div>
     </div>
@@ -150,34 +150,13 @@
       function openForm() {
         document.getElementById("popupForm").style.display = "block";
       }
+      function openForm1() {
+          var theSelect = document.getElementById("id2").value;
+          alert(theSelect);
+        }
       function closeForm() {
         document.getElementById("popupForm").style.display = "none";
       }
-      
-      function checkEmail(){
-    	    var email  = document.getElementById("email");
-    	    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/; 
-    	   if(!filter.test(email.value)){
-    	   	 document.getElementById("emailmessage").innerHTML="Invalid email";
-    	   	document.getElementById("submit").disabled = true;
-    	   }
-    	   else{
-    	   	 document.getElementById("emailmessage").innerHTML="";
-    	   	 document.getElementById("submit").disabled = false;
-    	   }
-    	}
-    	function checkPhone(){
-    	    var phone  = document.getElementById("phone");
-    	    var vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
-    	   if(!vnf_regex.test(phone.value)){
-    	   	 document.getElementById("phonemessage").innerHTML="Invalid phone number";
-    	   	document.getElementById("submit").disabled = true;
-    	   }
-    	   else{
-    	   	 document.getElementById("phonemessage").innerHTML="";
-    	   	 document.getElementById("submit").disabled = false;
-    	   }
-    	}
 	</script>
 </body>
 </html>

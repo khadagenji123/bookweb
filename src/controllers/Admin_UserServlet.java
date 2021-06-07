@@ -1,6 +1,7 @@
 package controllers;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -40,14 +41,46 @@ public class Admin_UserServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
-			List<User> users = aduser.getUsers();
-			request.setAttribute("list_user", users);
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/view/admin-user.jsp");
-											dispatcher.forward(request, response);
+			String command = request.getParameter("command");
+			if(command == null) {
+				command = "DISPLAY";
+			}
+			switch(command) {
+				case "DISPLAY":{
+					getUsers(request,response);
+					break;
+				}
+				case "ADD":{
+					addAdmin(request,response);
+					break;
+				}
+			}
 		}
 		catch(Exception e) {
 			throw new ServletException(e);
 		}
+		
+	}
+
+	private void addAdmin(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
+		String userName = request.getParameter("userName");
+		String password = request.getParameter("password");
+		String name = request.getParameter("name");
+		String phone = request.getParameter("phone");
+		String email = request.getParameter("email");
+		String address = request.getParameter("address");
+		int checkUser = 1;
+		User user = new User(userName, password, name, phone, email, address, checkUser);
+		aduser.addAdmin(user);
+		getUsers(request, response);
+		
+	}
+
+	private void getUsers(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
+		List<User> users = aduser.getUsers();
+		request.setAttribute("list_user", users);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/view/admin-user.jsp");
+										dispatcher.forward(request, response);
 	}
 
 	/**

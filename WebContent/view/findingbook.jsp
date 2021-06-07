@@ -16,13 +16,14 @@
 <body>
 	<div class="Homepage">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-				<img id="Logo-web" src="https://scontent.fdad3-3.fna.fbcdn.net/v/t1.6435-9/167182078_1845877822246934_2234026853077650046_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=730e14&_nc_ohc=tsPIXpkx6tgAX8Ft5CK&_nc_ht=scontent.fdad3-3.fna&oh=da9f783a11471f97a8b6b4c2974f6862&oe=608D3C72">
+				<img id="Logo-web" src="image/logo.jpg" style="height: 50px;">
 		  <div class="container-fluid">
 		   
 		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    	<%String title = (String)request.getAttribute("title"); %>
 		    	<form class="d-flex" action="HomePage" method="post">
 		    		<input type="hidden" name="command" value="SEARCH">
-			        <input class="form-control me-2" type="search" name="title" placeholder="Tìm kiếm tựa sách,tác giả...." aria-label="Search">
+			        <input class="form-control me-2" type="search" name="title" value="${title }" aria-label="Search">
 			        <button type="button" class="btn btn-warning">Tìm sách</button>
 		        </form>
 			    <div class="list-menu">

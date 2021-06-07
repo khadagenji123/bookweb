@@ -1,5 +1,6 @@
 package daos;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -52,5 +53,29 @@ public class Admin_User extends Connect{
     	String jdbcPassword = "Root1234@";
     	Admin_User aduser = new Admin_User(jdbcURL, jdbcUsername, jdbcPassword);
     	System.out.println(aduser.getUsers());
+	}
+
+	public void addAdmin(User user) throws SQLException {
+		PreparedStatement myPStm = null;
+		try {
+			connect();
+			String sql = "insert into users(user_name,password,name,phone,email,address,check_user)  "
+						+"values(?,?,?,?,?,?,?)";
+			
+			myPStm = myConn.prepareStatement(sql);
+			myPStm.setString(1, user.getUserName());
+			myPStm.setString(2, user.getPassword());
+			myPStm.setString(3, user.getName());
+			myPStm.setString(4, user.getPhone());
+			myPStm.setString(5, user.getEmail());
+			myPStm.setString(6, user.getAddress());
+			myPStm.setInt(7, user.getCheckUser());
+			
+			myPStm.execute();
+			
+		}
+		finally {
+			close();
+		}
 	}
 }

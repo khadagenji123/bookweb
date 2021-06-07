@@ -106,8 +106,8 @@ public class HomePage extends HttpServlet {
 		Book theBook = new Book(title);
 		List<Book> bookList = new ArrayList<Book>();
 		bookList = searchingBook.getSearchBook(theBook);
+		request.setAttribute("title", title);
 		if(bookList.isEmpty()) {
-			request.setAttribute("title", title);
 			RequestDispatcher dispatcher = request.getRequestDispatcher("view/not-found.jsp");
 											dispatcher.forward(request, response);
 		}
